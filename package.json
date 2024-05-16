@@ -1,0 +1,28 @@
+{
+  "devDependencies": {
+    "@iconify-json/bxl": "^1.1.10",
+    "@iconify-json/hugeicons": "^1.1.0",
+    "@iconify-json/iconamoon": "^1.1.4",
+    "@iconify-json/lets-icons": "^1.1.2",
+    "@iconify-json/line-md": "^1.1.37",
+    "@iconify-json/mage": "^1.1.0",
+    "@iconify-json/maki": "^1.1.24",
+    "@iconify-json/mynaui": "^1.1.7",
+    "@iconify-json/ph": "^1.1.13",
+    "@iconify-json/quill": "^1.1.10",
+    "@iconify-json/solar": "^1.1.9",
+    "@iconify-json/streamline": "^1.1.8",
+    "@iconify/tailwind": "^1.1.1",
+    "tailwindcss": "^3.4.3"
+  },
+  "name": "olivierkoubolou",
+  "version": "1.0.0",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "build": "npx tailwindcss -i ./src/css/styles.css -o ./src/output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

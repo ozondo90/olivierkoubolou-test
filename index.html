@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fagc|Fédération des associations des médecins généralistes de Charleroi </title>
+  <link href="./src/output.css" rel="stylesheet">
+</head>
+<body>
+  <div class="flex flex-col gap-0 wrapper">
+
+    <!-- page Header -->
+    <header class="border-gray-200 py-[20px] border-b-2 header">
+      <nav class="bg-white dark:bg-gray-800 px-auto py-3 nav-bar">
+          <div class="flex flex-wrap justify-between items-center mx-auto sm:px-7 lg:px-14 max-w-screen-2xl">
+              <a href="https://flowbite.com" class="flex items-center">
+                  <span class="font-semibold text-xl dark:text-white whitespace-nowrap self-center">FAGC</span>
+              </a>
+              <div class="flex items-center lg:order-2">
+                  <a href="#" class="hover:bg-gray-50 dark:hover:bg-gray-700 mr-2 px-4 lg:px-5 py-2 lg:py-2.5 rounded-lg font-medium text-gray-800 dark:text-white focus:ring-4 focus:ring-gray-300 text-sm focus:outline-none dark:focus:ring-gray-800">J'ai une question !</a>
+                  <a href="#" class="flex flex-row justify-center items-center gap-3 bg-[#00a5dd] hover:bg-primary-800 dark:hover:bg-primary-700 dark:bg-primary-600 mr-2 px-4 lg:px-5 rounded-lg font-medium text-sm text-white btn btn--sm focus:ring-4 focus:ring-primary-300 focus:outline-none dark:focus:ring-primary-800">
+                    <span class="border-e-[1px] border-white pe-2 lg:pe-2.5 py-2 lg:py-2.5 w-1/6 h-full">
+                        <span class="icon-[solar--medical-kit-broken]" style="width: 1.2em; height: 1.2em;"></span>
+                    </span>
+                    <span>Espace médecin</span>
+                  </a>
+                  <button data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center lg:hidden hover:bg-gray-100 dark:hover:bg-gray-700 ml-1 p-2 rounded-lg text-gray-500 text-sm focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false">
+                      <span class="sr-only">Menu</span>
+                      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                      <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                  </button>
+              </div>
+              <div class="lg:flex justify-between items-start lg:order-1 hidden w-full lg:w-3/6 nav-main" id="mobile-menu-2">
+                <ul class="flex lg:flex-row flex-col lg:space-x-16 mt-4 lg:mt-0 font-medium">
+                    <li>
+                        <a href="#" class="block border-gray-100 lg:border-0 dark:border-gray-700 lg:dark:hover:bg-transparent dark:hover:bg-gray-700 py-2 lg:p-0 pr-4 pl-3 border-b text-gray-700 hover:text-[#00a5dd] dark:hover:text-white dark:text-gray-400 transition-colors duration-300">
+                            Qui <br> sommes nous ? 
+                            <span class="icon-[iconamoon--arrow-up-2] text-gray-400 hover:text-inherit transition-colors duration-300" style="width: 1.2em; height: 1.2em;"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="block border-gray-100 lg:border-0 dark:border-gray-700 lg:dark:hover:bg-transparent dark:hover:bg-gray-700 py-2 lg:p-0 pr-4 pl-3 border-b text-gray-700 lg:hover:text-primary-700 lg:dark:hover:text-white hover:text-[#00a5dd] dark:hover:text-white dark:text-gray-400 transition-colors duration-300">
+                            La <br> garde 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="block border-gray-100 lg:border-0 dark:border-gray-700 lg:hover:bg-transparent dark:hover:bg-gray-700 py-2 lg:p-0 pr-4 pl-3 border-b text-gray-700 hover:text-[#00a5dd] dark:hover:text-#00a5dd dark:hover:text-white dark:text-gray-400 transition-colors duration-300">
+                            Médécine <br> générale 
+                            <span class="icon-[iconamoon--arrow-up-2] text-gray-400 hover:text-inherit transition-colors duration-300" style="width: 1.2em; height: 1.2em;"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="block border-gray-100 lg:border-0 dark:border-gray-700 lg:dark:hover:bg-transparent dark:hover:bg-gray-700 py-2 lg:p-0 pr-4 pl-3 border-b text-gray-700 lg:dark:hover:text-white hover:text-[#00a5dd] dark:hover:text-#00a5dd dark:hover:text-white dark:text-gray-400 transition-colors duration-300">
+                            Nous <br> contactez 
+                        </a> 
+                    </li>
+                </ul>
+                
+              </div>
+          </div>
+      </nav>
+    </header>
+
+    <!-- page main -->
+    <main class="">
+        <!-- page banner section -->
+        <section class="flex flex-col justify-center bg-custom-gradient dark:bg-gray-900 min-h-screen-90 overflow-hidden banner">
+            <div class="mx-auto my-auto px-4 lg:px-12 py-8 lg:py-16 max-w-screen-2xl text-start banner_main">
+                <h1 class="mb-4 font-extrabold text-4xl text-white md:text-5xl lg:text-6xl dark:text-white leading-10 tracking-tight banner_headline">Trouvez un médécin généraliste</h1>
+                <p class="mb-8 xl:px-0 sm:w-5/6 md:w-3/6 font-normal text-gray-200 text-lg text-start sm:text-base lg:text-xl dark:text-gray-400 banner_subtitle">Rechercher un médecin généraliste parmi plus de 440 praticiens de la région de Charleroi affiliés à la FAGC.</p>
+                <div class="border-2 border-white bg-white p-3 md:p-5 rounded-md banner_form card">
+
+                    <form class="flex md:justify-between md:items-center gap-y-4 lg:gap-x-5 p-auto max-w-screen-2xl">
+                        <!-- Doctor name imput  -->
+                        <div class="relative md:w-1/5">
+                            <span class="left-3.5 absolute inset-y-3.5 flex items-center text-gray-400 pointer-events-none icon-[hugeicons--doctor-01] ps-3.5" style="width: 1.2em; height: 1.2em;"></span>
+                            <input type="search" class="border-gray-300 p-3 pl-10 border rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Nom" id="searchName">
+                        </div>
+
+                        <!-- Select Locality -->
+                        <div class="relative md:w-1/5">
+                            <span class="left-3.5 absolute inset-y-3.5 flex items-center text-gray-400 pointer-events-none icon-[mynaui--location]" style="width: 1.2em; height: 1.2em;"></span>
+                            <input type="search" class="border-gray-300 bg-white p-3 pr-6 pl-10 border rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500" id="searchLocation">
+                        </div>
+
+                        <div class="flex justify-between items-center md:w-2/5">
+                            <!-- Postal Code Input -->
+                            <div class="relative w-[47%]">
+                                <span class="left-3.5 absolute inset-y-3.5 flex items-center text-gray-400 pointer-events-none icon-[solar--mailbox-line-duotone]" style="width: 1.2em; height: 1.2em;"></span>
+                                <input type="text" class="border-gray-300 p-3 pl-10 border rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Postal Code" id="searchPostalCode">
+                            </div>
+                            
+                            <!-- Telephone Input -->
+                            <div class="relative w-[47%]">
+                                <span class="left-3.5 absolute inset-y-3.5 flex items-center text-gray-400 pointer-events-none icon-[solar--phone-broken]" style="width: 1.2em; height: 1.2em;"></span>
+                                <input type="tel" class="border-gray-300 p-3 pl-10 border rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Telephone" id="searchPhone">
+                            </div>
+                        </div>
+
+                        <!-- <button type="submit" class="bg-blue-700 hover:bg-blue-800 text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:hover:bg-blue-700 dark:bg-blue-600 px-5 py-2.5 rounded-lg w-full sm:w-auto font-medium text-center text-sm dark:focus:ring-blue-800">Rechercher</button> -->
+                        <div class="relative md:w-1/5">
+                            <a type="submit" href="#" class="flex flex-row justify-center items-center gap-3 bg-[#00a5dd] hover:bg-primary-800 dark:hover:bg-primary-700 dark:bg-primary-600 m-0 px-5 rounded-lg font-medium text-base text-white btn btn--sm focus:ring-4 focus:ring-primary-300 focus:outline-none dark:focus:ring-primary-800" id="searchButton">
+                                <span class="border-e-[1px] border-white pe-2 lg:pe-2.5 py-2 lg:py-2.5 w-1/12 lg:w-1/6 h-full">
+                                    <span class="icon-[lets-icons--search-alt]" style="width: 1.2em; height: 1.2em;"></span>
+                                </span>
+                                <span class="p-3">Rechercher</span>
+                            </a>
+                        </div>
+
+                    </form>
+                    
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Page datas display section -->
+        <section class="dark:bg-gray-900 min-h-screen overflow-hidden data-display">
+            <div class="mx-auto py-8 max-w-screen-xl data-display-main">
+                <div class="relative bg-white dark:bg-gray-800 shadow-md sm:rounded-lg">
+
+                    <!-- Datas table filter bar -->
+                    <div class="flex md:flex-row flex-col justify-between items-center md:space-x-4 space-y-3 md:space-y-0 p-4">
+
+                      <div class="flex md:flex-row flex-col flex-shrink-0 justify-end items-stretch md:items-center md:space-x-3 space-y-2 md:space-y-0 w-full md:w-auto">
+                        <div class="flex items-center space-x-3 w-full md:w-auto">
+                          <span>Afficher </span>  
+                          <button id="filterDropdownButton" data-dropdown-toggle="filterDropdown" class="focus:z-10 flex justify-center items-center border-gray-200 dark:border-gray-600 bg-white hover:bg-gray-100 dark:hover:bg-gray-700 dark:bg-gray-800 px-4 py-2 p-2 border rounded-lg w-full md:w-auto font-medium text-gray-900 text-sm focus:outline-none hover:text-primary-700 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:hover:text-white dark:text-gray-400" type="button">
+                            <span>10</span>
+                            <span class="icon-[iconamoon--arrow-down-2-light]" style="width: 1.2em; height: 1.2em;"></span>
+                          </button>
+                          <span>Entrées</span>  
+                          <!-- Dropdown menu -->
+                          <div id="filterDropdown" class="z-10 hidden bg-white dark:bg-gray-700 shadow p-3 rounded-lg w-48">
+                            <ul class="space-y-2 text-sm" aria-labelledby="dropdownDefault">
+                              <li class="flex items-center">
+                                <input id="tenEntries" type="checkbox" value="" class="border-gray-300 dark:border-gray-500 bg-gray-100 dark:bg-gray-600 rounded w-4 h-4 text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2" />
+                                <label for="tenEntries" class="ml-2 font-medium text-gray-900 text-sm dark:text-gray-100">
+                                  10
+                                </label>
+                              </li>
+                              <li class="flex items-center">
+                                <input id="twentyFiveEntries" type="checkbox" value=""
+                                  class="border-gray-300 dark:border-gray-500 bg-gray-100 dark:bg-gray-600 rounded w-4 h-4 text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2" />
+                                <label for="twentyFiveEntries" class="ml-2 font-medium text-gray-900 text-sm dark:text-gray-100">
+                                  25
+                                </label>
+                              </li>
+                              <li class="flex items-center">
+                                <input id="fiftyEntries" type="checkbox" value=""
+                                  class="border-gray-300 dark:border-gray-500 bg-gray-100 dark:bg-gray-600 rounded w-4 h-4 text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2" />
+                                <label for="fiftyEntries" class="ml-2 font-medium text-gray-900 text-sm dark:text-gray-100">
+                                  50
+                                </label>
+                              </li>
+                              <li class="flex items-center">
+                                <input id="hundredEntries" type="checkbox" value=""
+                                  class="border-gray-300 dark:border-gray-500 bg-gray-100 dark:bg-gray-600 rounded w-4 h-4 text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2" />
+                                <label for="hundredEntries@cannot ('update', Model::class) 
+                                    
+                                @endcannot" class="ml-2 font-medium text-gray-900 text-sm dark:text-gray-100">
+                                  100
+                                </label>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="w-full md:w-1/2 lg:w-1/3">
+                        <form class="flex items-center">
+                          <label for="searchKeyword" class="sr-only">Rechercher </label>
+                          <div class="relative w-full">
+                            <div class="left-0 absolute inset-y-0 flex items-center pl-3 pointer-events-none">
+                              <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+                              </svg>
+                            </div>
+                            <input type="search" id="searchKeyword" class="block border-gray-300 focus:border-primary-500 dark:focus:border-primary-500 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 p-2 pl-10 border rounded-lg w-full text-gray-900 text-sm focus:ring-primary-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500" placeholder="Rechercher">
+                          </div>
+                        </form>
+                      </div>
+
+                    </div>
+
+                    <!-- Datas table -->
+                    <div class="relative overflow-x-auto">
+                        <table class="rtl:text-right w-full text-gray-500 text-left text-sm dark:text-gray-400 data-table">
+                            <thead class="bg-gray-50 dark:bg-gray-700 text-gray-700 text-xs dark:text-gray-400 uppercase">
+                                <tr>
+                                    <th scope="col" class="px-6 py-3">
+                                        <div class="flex items-center">
+                                            <span>Nom</span>
+                                            <a href="#">
+                                                <svg class="w-3 h-3 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                                    <path d="M8.574 11.024h6.852a2.075 2.075 0 0 0 1.847-1.086 1.9 1.9 0 0 0-.11-1.986L13.736 2.9a2.122 2.122 0 0 0-3.472 0L6.837 7.952a1.9 1.9 0 0 0-.11 1.986 2.074 2.074 0 0 0 1.847 1.086Zm6.852 1.952H8.574a2.072 2.072 0 0 0-1.847 1.087 1.9 1.9 0 0 0 .11 1.985l3.426 5.05a2.123 2.123 0 0 0 3.472 0l3.427-5.05a1.9 1.9 0 0 0 .11-1.985 2.074 2.074 0 0 0-1.846-1.087Z"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        <div class="flex items-center">
+                                            <span>Prenoms</span>
+                                            <a href="#">
+                                                <svg class="w-3 h-3 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                                    <path d="M8.574 11.024h6.852a2.075 2.075 0 0 0 1.847-1.086 1.9 1.9 0 0 0-.11-1.986L13.736 2.9a2.122 2.122 0 0 0-3.472 0L6.837 7.952a1.9 1.9 0 0 0-.11 1.986 2.074 2.074 0 0 0 1.847 1.086Zm6.852 1.952H8.574a2.072 2.072 0 0 0-1.847 1.087 1.9 1.9 0 0 0 .11 1.985l3.426 5.05a2.123 2.123 0 0 0 3.472 0l3.427-5.05a1.9 1.9 0 0 0 .11-1.985 2.074 2.074 0 0 0-1.846-1.087Z"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        <div class="flex items-center">
+                                            <span>Rue</span>
+                                            <a href="#">
+                                                <svg class="w-3 h-3 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                                    <path d="M8.574 11.024h6.852a2.075 2.075 0 0 0 1.847-1.086 1.9 1.9 0 0 0-.11-1.986L13.736 2.9a2.122 2.122 0 0 0-3.472 0L6.837 7.952a1.9 1.9 0 0 0-.11 1.986 2.074 2.074 0 0 0 1.847 1.086Zm6.852 1.952H8.574a2.072 2.072 0 0 0-1.847 1.087 1.9 1.9 0 0 0 .11 1.985l3.426 5.05a2.123 2.123 0 0 0 3.472 0l3.427-5.05a1.9 1.9 0 0 0 .11-1.985 2.074 2.074 0 0 0-1.846-1.087Z"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        <div class="flex items-center">
+                                            <span>Code postal</span>
+                                            <a href="#">
+                                                <svg class="w-3 h-3 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                                    <path d="M8.574 11.024h6.852a2.075 2.075 0 0 0 1.847-1.086 1.9 1.9 0 0 0-.11-1.986L13.736 2.9a2.122 2.122 0 0 0-3.472 0L6.837 7.952a1.9 1.9 0 0 0-.11 1.986 2.074 2.074 0 0 0 1.847 1.086Zm6.852 1.952H8.574a2.072 2.072 0 0 0-1.847 1.087 1.9 1.9 0 0 0 .11 1.985l3.426 5.05a2.123 2.123 0 0 0 3.472 0l3.427-5.05a1.9 1.9 0 0 0 .11-1.985 2.074 2.074 0 0 0-1.846-1.087Z"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        <div class="flex items-center">
+                                            <span>Communes</span>
+                                            <a href="#">
+                                                <svg class="w-3 h-3 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                                    <path d="M8.574 11.024h6.852a2.075 2.075 0 0 0 1.847-1.086 1.9 1.9 0 0 0-.11-1.986L13.736 2.9a2.122 2.122 0 0 0-3.472 0L6.837 7.952a1.9 1.9 0 0 0-.11 1.986 2.074 2.074 0 0 0 1.847 1.086Zm6.852 1.952H8.574a2.072 2.072 0 0 0-1.847 1.087 1.9 1.9 0 0 0 .11 1.985l3.426 5.05a2.123 2.123 0 0 0 3.472 0l3.427-5.05a1.9 1.9 0 0 0 .11-1.985 2.074 2.074 0 0 0-1.846-1.087Z"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        <div class="flex items-center">
+                                            <span>Téléphone</span>
+                                            <a href="#">
+                                                <svg class="w-3 h-3 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                                    <path d="M8.574 11.024h6.852a2.075 2.075 0 0 0 1.847-1.086 1.9 1.9 0 0 0-.11-1.986L13.736 2.9a2.122 2.122 0 0 0-3.472 0L6.837 7.952a1.9 1.9 0 0 0-.11 1.986 2.074 2.074 0 0 0 1.847 1.086Zm6.852 1.952H8.574a2.072 2.072 0 0 0-1.847 1.087 1.9 1.9 0 0 0 .11 1.985l3.426 5.05a2.123 2.123 0 0 0 3.472 0l3.427-5.05a1.9 1.9 0 0 0 .11-1.985 2.074 2.074 0 0 0-1.846-1.087Z"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        <div class="flex items-center">
+                                            <span>En savoir plus</span>
+                                            <a href="#">
+                                                <svg class="w-3 h-3 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                                    <path d="M8.574 11.024h6.852a2.075 2.075 0 0 0 1.847-1.086 1.9 1.9 0 0 0-.11-1.986L13.736 2.9a2.122 2.122 0 0 0-3.472 0L6.837 7.952a1.9 1.9 0 0 0-.11 1.986 2.074 2.074 0 0 0 1.847 1.086Zm6.852 1.952H8.574a2.072 2.072 0 0 0-1.847 1.087 1.9 1.9 0 0 0 .11 1.985l3.426 5.05a2.123 2.123 0 0 0 3.472 0l3.427-5.05a1.9 1.9 0 0 0 .11-1.985 2.074 2.074 0 0 0-1.846-1.087Z"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="data_table_list" id="dataTableList">
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Datas tables navigation bar -->
+                    <div class="bg-white dark:bg-gray-800 overflow-hidden">
+                        <nav class="flex md:flex-row flex-col justify-between items-start md:items-center space-y-3 md:space-y-0 p-4" aria-label="Table navigation">
+                            <span class="font-normal text-gray-500 text-sm dark:text-gray-400">Afficher 
+                                <span class="font-semibold text-gray-900 dark:text-white">1-10</span> de 
+                                <span class="font-semibold text-gray-900 dark:text-white" id="totalItems"> </span>
+                            </span>
+                            <ul class="inline-flex items-stretch -space-x-px" id="paginationControls">
+                                <li>
+                                    <a href="#"
+                                        class="flex justify-center items-center border-gray-300 dark:border-gray-700 bg-white hover:bg-gray-100 dark:hover:bg-gray-700 dark:bg-gray-800 ml-0 px-3 py-1.5 border rounded-l-lg h-full text-gray-500 hover:text-gray-700 dark:hover:text-white dark:text-gray-400">
+                                    <span class="sr-only">Previous</span>
+                                    <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex justify-center items-center border-gray-300 dark:border-gray-700 bg-white hover:bg-gray-100 dark:hover:bg-gray-700 dark:bg-gray-800 px-3 py-2 border text-gray-500 text-sm hover:text-gray-700 dark:hover:text-white dark:text-gray-400 leading-tight">1</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex justify-center items-center border-gray-300 dark:border-gray-700 bg-white hover:bg-gray-100 dark:hover:bg-gray-700 dark:bg-gray-800 px-3 py-2 border text-gray-500 text-sm hover:text-gray-700 dark:hover:text-white dark:text-gray-400 leading-tight">2</a>
+                                </li>
+                                <li>
+                                    <a href="#" aria-current="page" class="z-10 flex justify-center items-center border-primary-300 dark:border-gray-700 bg-primary-50 hover:bg-primary-100 dark:bg-gray-700 px-3 py-2 border text-primary-600 text-sm hover:text-primary-700 dark:text-white leading-tight">3</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex justify-center items-center border-gray-300 dark:border-gray-700 bg-white hover:bg-gray-100 dark:hover:bg-gray-700 dark:bg-gray-800 px-3 py-2 border text-gray-500 text-sm hover:text-gray-700 dark:hover:text-white dark:text-gray-400 leading-tight">...</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex justify-center items-center border-gray-300 dark:border-gray-700 bg-white hover:bg-gray-100 dark:hover:bg-gray-700 dark:bg-gray-800 px-3 py-2 border text-gray-500 text-sm hover:text-gray-700 dark:hover:text-white dark:text-gray-400 leading-tight">100</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex justify-center items-center border-gray-300 dark:border-gray-700 bg-white hover:bg-gray-100 dark:hover:bg-gray-700 dark:bg-gray-800 px-3 py-1.5 border rounded-r-lg h-full text-gray-500 hover:text-gray-700 dark:hover:text-white dark:text-gray-400 leading-tight">
+                                    <span class="sr-only">Next</span>
+                                    <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- page footer -->
+    <footer class="flex flex-col justify-center dark:bg-gray-900 overflow-hidden footer">
+        <div class="bg-custom-gradient py-10 min-h-screen-90 overflow-hidden footer-main">
+            <div class="flex lg:justify-between lg:items-start gap-4 mx-auto px-7 lg:px-14 max-w-screen-2xl">
+                <div class="lg:space-y-10 lg:w-[30%]">
+                    <a href="#" class="flex flex-row justify-center items-center gap-2 bg-gray-900 dark:hover:bg-primary-700 dark:bg-primary-600 px-2 lg:px-3.5 border-none rounded-md font-medium text-lg text-white btn btn--lg ring-2 ring-gray-600 hover:ring-white focus:outline-none dark:focus:ring-primary-800">
+                        <span class="flex justify-center items-center w-1/6">
+                            <span class="icon-[maki--doctor]" style="width: 1.7em; height: 1.7em;"></span>
+                        </span>
+                        <span class="border-s-[1px] border-white px-4 lg:py-5 w-4/6 font-bold md:text-sm">Trouver un médécin</span>
+                        <span class="flex justify-center items-center w-[15%]">
+                            <span class="icon-[solar--alt-arrow-right-broken]" style="width: 1.2em; height: 1.2em;"></span>
+                        </span>
+                    </a>
+
+                    <a href="#" class="flex flex-row justify-center items-center gap-2 bg-gray-900 dark:hover:bg-primary-700 dark:bg-primary-600 px-2 lg:px-3.5 border-none rounded-md font-medium text-lg text-white btn btn--lg ring-2 ring-gray-600 hover:ring-white focus:outline-none dark:focus:ring-primary-800">
+                        <span class="flex justify-center items-center w-1/6">
+                            <span class="icon-[mage--location]" style="width: 1.7em; height: 1.7em;"></span>
+                        </span>
+                        <span class="border-s-[1px] border-white px-4 lg:py-5 w-4/6 font-bold md:text-sm">Trouver un poste de garde</span>
+                        <span class="flex justify-center items-center w-[15%]">
+                            <span class="icon-[solar--alt-arrow-right-broken]" style="width: 1.2em; height: 1.2em;"></span>
+                        </span>
+                    </a>
+
+                    <a href="#" class="flex flex-row justify-center items-center gap-2 bg-gray-900 dark:hover:bg-primary-700 dark:bg-primary-600 px-2 lg:px-3.5 border-none rounded-md font-medium text-lg text-white btn btn--lg ring-2 ring-gray-600 hover:ring-white focus:outline-none dark:focus:ring-primary-800">
+                        <span class="flex justify-center items-center w-1/6">
+                            <span class="icon-[hugeicons--job-search]" style="width: 1.7em; height: 1.7em;"></span>
+                        </span>
+                        <span class="border-s-[1px] border-white px-4 lg:py-5 w-4/6 font-bold md:text-sm">Explore carrière</span>
+                        <span class="flex justify-center items-center w-[15%]">
+                            <span class="icon-[solar--alt-arrow-right-broken]" style="width: 1.2em; height: 1.2em;"></span>
+                        </span>
+                    </a>
+
+                    <a href="#" class="flex flex-row justify-center items-center gap-2 bg-gray-900 dark:hover:bg-primary-700 dark:bg-primary-600 px-2 lg:px-3.5 border-none rounded-md font-medium text-lg text-white btn btn--lg ring-2 ring-gray-600 hover:ring-white focus:outline-none dark:focus:ring-primary-800">
+                        <span class="flex justify-center items-center w-1/6">
+                            <span class="icon-[quill--inbox-newsletter]" style="width: 1.7em; height: 1.7em;"></span>
+                        </span>
+                        <span class="border-s-[1px] border-white px-4 lg:py-5 w-4/6 font-bold md:text-sm">Obtenez nos newsletter</span>
+                        <span class="flex justify-center items-center w-[15%]">
+                            <span class="icon-[solar--alt-arrow-right-broken]" style="width: 1.2em; height: 1.2em;"></span>
+                        </span>
+                    </a>
+
+                </div>
+
+                <div class="gap-8 sm:gap-6 grid grid-cols-2 sm:grid-cols-3 lg:w-[60%]">
+                    <div class="">
+                        <h2 class="mb-6 font-semibold text-sm text-white dark:text-white uppercase">Navigation</h2>
+                        <ul class="lg:space-y-3 text-white dark:text-gray-400">
+                            <li class="">
+                                <a href="https://flowbite.com" class="hover:underline">Acceuil</a>
+                            </li>
+                            <li>
+                                <a href="https://tailwindcss.com/" class="hover:underline">Qui somes-nous ?</a>
+                            </li>
+                            <li>
+                                <a href="https://tailwindcss.com/" class="hover:underline">Organigramme</a>
+                            </li>
+                            <li>
+                                <a href="https://tailwindcss.com/" class="hover:underline">La garde</a>
+                            </li>
+                            <li>
+                                <a href="https://tailwindcss.com/" class="hover:underline">Médécins généralistes </a>
+                            </li>
+                            <li>
+                                <a href="https://tailwindcss.com/" class="hover:underline">Patients</a>
+                            </li>
+                            <li>
+                                <a href="https://tailwindcss.com/" class="hover:underline">Assistants</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h2 class="mb-6 font-semibold text-sm text-white dark:text-white uppercase">Contactez-nous</h2>
+                        <ul class="lg:space-y-3 text-white dark:text-gray-400">
+                            <li class="mb-4">
+                                <span class=""> Espace Santé (2e étage)</>
+                            </li>
+                            <li>
+                                <span class="">Boulevard Zoé Drion 1</span>
+                            </li>
+                            <li>
+                                <span class="">6000 Charleroi</span>
+                            </li>
+                            <li class="mt-3">
+                                <span class="">ou via notre</span>
+                                <a href="" class="hover:underline">formulaire de contact</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <ul class="lg:space-y-3 text-white dark:text-gray-400">
+                            <li class="">
+                                <a href="https://github.com/themesberg/flowbite" class="flex justify-start items-center gap-4 hover:underline">
+                                    <span class="icon-[line-md--facebook]" style="width: 1.2em; height: 1.2em;"></span>
+                                    <span>Facebook</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://discord.gg/4eeurUVvTy" class="flex justify-start items-center gap-4 hover:underline">
+                                    <span class="icon-[bxl--instagram]" style="width: 1.2em; height: 1.2em;"></span>
+                                    <span>Instagram</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://discord.gg/4eeurUVvTy" class="flex justify-start items-center gap-4 hover:underline">
+                                    <span class="icon-[mynaui--brand-linkedin]" style="width: 1.2em; height: 1.2em;"></span>
+                                    <span>LinkedIn</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://discord.gg/4eeurUVvTy" class="flex justify-start items-center gap-4 hover:underline">
+                                    <span class="icon-[ph--youtube-logo-thin]" style="width: 1.2em; height: 1.2em;"></span>
+                                    <span>Youtube</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://discord.gg/4eeurUVvTy" class="flex justify-start items-center gap-4 hover:underline">
+                                    <span class="icon-[hugeicons--new-twitter]" style="width: 1.2em; height: 1.2em;"></span>
+                                    <span>X (formelement Twitter)</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom border-gray-200 py-2 border-t-2">
+            <div class="lg:flex lg:justify-start lg:items-start gap-4 mx-auto pb-16 max-w-screen-xl min-h-[5%] overflow-hidden">
+                <span class="copyright_note py-2 lg:w-2/12 text-gray-700 text-sm sm:text-center dark:text-white">Copyright © FAGC <span class="copyright_date" id="copyright_date">2024</span></span>
+                <div class="flex justify-start sm:justify-center items-center sm:space-x-6 md:space-x-3 lg:space-x-1 sm:mt-0 py-2 font-light text-sm">
+                    <a href="#" class="text-gray-500 hover:text-blue-600 dark:hover:text-white">Politique de confidentialité</a>
+                    <span class="bg-gray-400 w-[1px] h-[15px]"></span>
+                    <a href="#" class="text-gray-500 hover:text-blue-600 dark:hover:text-white">Sitemap</a>
+                    <span class="bg-gray-400 w-[1px] h-[15px]"></span>
+                    <a href="#" class="text-gray-500 hover:text-blue-600 dark:hover:text-white">Politique relative aux cookies</a>
+                    <span class="bg-gray-400 w-[1px] h-[15px]"></span>
+                    <a href="#" class="text-gray-500 hover:text-blue-600 dark:hover:text-white"> Conditions générales d'utilisation</a>
+                    <span class="bg-gray-400 w-[1px] h-[15px]"></span>
+                    <a href="#" class="text-gray-500 hover:text-blue-600 dark:hover:text-white">Politique d'accessibilité</a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+  </div>
+
+  <!-- custom script -->
+  <script src="./src/js/script.js" defer></script>
+</body>
+</html>
