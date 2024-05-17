@@ -3,6 +3,8 @@ const doctorsAppLoader = {
   paginationControls: document.getElementById("paginationControls"),
   totalItemsTag: document.getElementById("totalItems"),
   paginationSetterBtn: document.getElementById("paginationSetter"),
+  fromItemTag: document.getElementById("fromItem"),
+  toItemTag: document.getElementById("toItem"),
 
   jsonApi: "../../doctors.json",
 
@@ -150,6 +152,10 @@ const doctorsAppLoader = {
       const start = (fromPage - 1) * doctorsAppLoader.itemsPerPage;
       const end = start + doctorsAppLoader.itemsPerPage;
       const paginatedItems = doctorsAppLoader.doctorDatas.slice(start, end);
+
+      // set fromItem and toItem
+      doctorsAppLoader.fromItemTag.textContent = start > 0 ? start : 1;
+      doctorsAppLoader.toItemTag.textContent = end;
 
       paginatedItems.forEach((item, index) => {
         const newRow = doctorsAppLoader.formatTableEntrie(item, start + index);
