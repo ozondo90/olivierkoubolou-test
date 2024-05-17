@@ -2,6 +2,7 @@ const doctorsAppLoader = {
   dataTableList: document.getElementById("dataTableList"),
   paginationControls: document.getElementById("paginationControls"),
   totalItemsTag: document.getElementById("totalItems"),
+  paginationSetterBtn: document.getElementById("paginationSetter"),
 
   jsonApi: "../../doctors.json",
 
@@ -164,9 +165,6 @@ const doctorsAppLoader = {
       .then((response) => response.json())
       .then((datas) => {
         doctorsAppLoader.doctorDatas = datas;
-        doctorsAppLoader.totalPages = Math.ceil(
-          datas.length / doctorsAppLoader.itemsPerPage
-        );
       })
       .catch((error) => {
         console.log("Error on fetching: ", error);
@@ -174,10 +172,16 @@ const doctorsAppLoader = {
   },
 
   loadDoctorsList: () => {
-    const datasLength = doctorsAppLoader.doctorDatas.length;
+    if (doctorsAppLoader.doctorDatas.length > 0) {
+      // Calculate total pages based on table data
+      doctorsAppLoader.totalPages = Math.ceil(
+        doctorsAppLoader.doctorDatas.length / doctorsAppLoader.itemsPerPage
+      );
 
-    if (datasLength > 0) {
+      // Generate pagination controles
       doctorsAppLoader.createPaginationControls();
+
+      // Display datas in table
       doctorsAppLoader.paginateDataSet(
         doctorsAppLoader.currentPage,
         doctorsAppLoader.itemsPerPage
@@ -235,11 +239,6 @@ const doctorsAppLoader = {
       }
     );
 
-    // Calculate total pages based on filtered data
-    doctorsAppLoader.totalPages = Math.ceil(
-      doctorsAppLoader.doctorDatas.length / doctorsAppLoader.itemsPerPage
-    );
-
     // Load doctors list
     doctorsAppLoader.loadDoctorsList();
   },
@@ -265,25 +264,32 @@ const doctorsAppLoader = {
       }
     );
 
-    // Calculate total pages based on filtered data
-    doctorsAppLoader.totalPages = Math.ceil(
-      doctorsAppLoader.doctorDatas.length / doctorsAppLoader.itemsPerPage
-    );
-
     // Load doctors list
     doctorsAppLoader.loadDoctorsList();
   },
-};
 
-document.getElementById("searchButton").addEventListener("click", () => {
-  doctorsAppLoader.searchDoctor();
-});
+  setItemsPerPage: () => {
+    doctorsAppLoader.itemsPerPage = parseInt(
+      doctorsAppLoader.paginationSetterBtn.value.trim()
+    );
+  },
+};
 
 document.addEventListener("DOMContentLoaded", async () => {
   await doctorsAppLoader.fetchDoctorsList();
   doctorsAppLoader.loadDoctorsList();
 
+  document.getElementById("searchButton").addEventListener("click", () => {
+    doctorsAppLoader.searchDoctor();
+  });
+
   document.getElementById("searchKeyword").addEventListener("keyup", () => {
     doctorsAppLoader.searchDoctorWithKeyword();
+  });
+
+  // setting the items per page
+  doctorsAppLoader.paginationSetterBtn.addEventListener("change", () => {
+    doctorsAppLoader.setItemsPerPage();
+    doctorsAppLoader.loadDoctorsList();
   });
 });
