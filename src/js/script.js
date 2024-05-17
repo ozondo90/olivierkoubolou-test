@@ -31,7 +31,7 @@ const doctorsAppLoader = {
                             ${entrieDatas["Téléphone"]}
                           </td>
                           <td class="text-right flex justify-start py-1">
-                              <a href="#${index}" class="bg-[#00a5dd] hover:bg-gray-800 lg:px-3 lg:py-2 rounded-lg font-medium text-white dark:text-blue-500">En savoir plus</a>
+                              <a href="#${index}" class="bg-[#00a5dd] hover:bg-gray-800 text-xs px-2 py-3 lg:px-3 lg:py-2 lg:text-base rounded-lg font-medium text-white dark:text-blue-500">En savoir plus</a>
                           </td>
                       </tr>`;
 
@@ -46,6 +46,8 @@ const doctorsAppLoader = {
 
   createPaginationControls: () => {
     const paginationControls = document.getElementById("paginationControls");
+    doctorsAppLoader.totalItemsTag.textContent =
+      doctorsAppLoader.doctorDatas.length;
     if (paginationControls) {
       paginationControls.innerHTML = "";
 
@@ -69,23 +71,53 @@ const doctorsAppLoader = {
       paginationControls.appendChild(previousButton);
 
       for (let i = 1; i <= doctorsAppLoader.totalPages; i++) {
-        const pageButton = document.createElement("li");
-        pageButton.innerHTML = `<a href="#" class="flex justify-center items-center border-gray-300 dark:border-gray-700 ${
-          i === doctorsAppLoader.currentPage
-            ? "bg-primary-50 dark:bg-gray-700 text-primary-600"
-            : "bg-white hover:bg-gray-100 dark:hover:bg-gray-700 dark:bg-gray-800 text-gray-500"
-        } px-3 py-2 border text-sm hover:text-gray-700 dark:hover:text-white dark:text-gray-400 leading-tight">
-                                  ${i}
-                                </a>`;
-        pageButton.addEventListener("click", (e) => {
-          e.preventDefault();
-          doctorsAppLoader.currentPage = i;
-          doctorsAppLoader.paginateDataSet(
-            doctorsAppLoader.currentPage,
-            doctorsAppLoader.itemsPerPage
-          );
-        });
-        paginationControls.appendChild(pageButton);
+        if (i <= 3) {
+          const pageButton = document.createElement("li");
+          pageButton.innerHTML = `<a href="#" class="flex justify-center items-center border-gray-300 dark:border-gray-700 ${
+            i === doctorsAppLoader.currentPage
+              ? "bg-primary-50 dark:bg-gray-700 text-primary-600"
+              : "bg-white hover:bg-gray-100 dark:hover:bg-gray-700 dark:bg-gray-800 text-gray-500"
+          } px-3 py-2 border text-sm hover:text-gray-700 dark:hover:text-white dark:text-gray-400 leading-tight">
+                                    ${i}
+                                  </a>`;
+          pageButton.addEventListener("click", (e) => {
+            e.preventDefault();
+            doctorsAppLoader.currentPage = i;
+            doctorsAppLoader.paginateDataSet(
+              doctorsAppLoader.currentPage,
+              doctorsAppLoader.itemsPerPage
+            );
+          });
+          paginationControls.appendChild(pageButton);
+        } else if (i == 4) {
+          const moreButton = document.createElement("li");
+          moreButton.innerHTML = `<a href="#" class="flex justify-center items-center border-gray-300 dark:border-gray-700 ${
+            i === doctorsAppLoader.currentPage
+              ? "bg-primary-50 dark:bg-gray-700 text-primary-600"
+              : "bg-white hover:bg-gray-100 dark:hover:bg-gray-700 dark:bg-gray-800 text-gray-500"
+          } px-3 py-2 border text-sm hover:text-gray-700 dark:hover:text-white dark:text-gray-400 leading-tight"> ... 
+                                  </a>`;
+          paginationControls.appendChild(moreButton);
+        } else if (i == 5) {
+          const upToButton = document.createElement("li");
+          upToButton.innerHTML = `<a href="#" class="flex justify-center items-center border-gray-300 dark:border-gray-700 ${
+            i === doctorsAppLoader.currentPage
+              ? "bg-primary-50 dark:bg-gray-700 text-primary-600"
+              : "bg-white hover:bg-gray-100 dark:hover:bg-gray-700 dark:bg-gray-800 text-gray-500"
+          } px-3 py-2 border text-sm hover:text-gray-700 dark:hover:text-white dark:text-gray-400 leading-tight">
+                                  ${doctorsAppLoader.totalPages}
+                                                          </a>`;
+          paginationControls.appendChild(upToButton);
+
+          upToButton.addEventListener("click", (e) => {
+            e.preventDefault();
+            doctorsAppLoader.currentPage = doctorsAppLoader.totalPages;
+            doctorsAppLoader.paginateDataSet(
+              doctorsAppLoader.currentPage,
+              doctorsAppLoader.itemsPerPage
+            );
+          });
+        }
       }
 
       const nextButton = document.createElement("li");
@@ -145,6 +177,7 @@ const doctorsAppLoader = {
     const datasLength = doctorsAppLoader.doctorDatas.length;
 
     if (datasLength > 0) {
+      doctorsAppLoader.createPaginationControls();
       doctorsAppLoader.paginateDataSet(
         doctorsAppLoader.currentPage,
         doctorsAppLoader.itemsPerPage
@@ -246,8 +279,9 @@ document.getElementById("searchButton").addEventListener("click", () => {
   doctorsAppLoader.searchDoctor();
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  // doctorsAppLoader.loadDoctorsList();
+document.addEventListener("DOMContentLoaded", async () => {
+  await doctorsAppLoader.fetchDoctorsList();
+  doctorsAppLoader.loadDoctorsList();
 
   document.getElementById("searchKeyword").addEventListener("keyup", () => {
     doctorsAppLoader.searchDoctorWithKeyword();
